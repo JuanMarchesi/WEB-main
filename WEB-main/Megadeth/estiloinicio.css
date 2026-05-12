@@ -1,0 +1,85 @@
+body{
+    background-image: url("https://i.redd.it/megadeth-cover-art-wallpapers-v0-xzn7jmf4vpfg1.png?width=2560&format=png&auto=webp&s=69062b09ea5e80af5903c44147b6364f95aba7a9");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    color: #333;
+}
+
+/* LOGO */
+.titulo{
+    background-color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* BARRA DE MENÚ */
+#opciones{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    gap: 40px;
+}
+
+/* LINKS DEL MENÚ */
+#opciones a,
+#opciones .dropdown span{
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* QUITA ESTILO DE TABLA */
+table{
+    margin: 0;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* OCULTO */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* LINKS DROPDOWN */
+.dropdown-content a {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+/* MOSTRAR AL PASAR MOUSE */
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/* LOGO RESPONSIVE */
+.logo{
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: auto;
+}

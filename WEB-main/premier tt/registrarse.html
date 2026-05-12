@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registrate</title>
+    <link rel="stylesheet" href="style2.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+  </head>
+  <body>
+    <section class="overlay">
+        
+        <div class="arriba">
+            <img src="https://assets.manutd.com/AssetPicker/images/0/0/4/255/327518/PremierLeague_logo_Black1506593679851.png" height="140" width="400"> 
+        </div>   
+        <hr>
+        <form action="finalizar2.html" method="POST">
+            <style>
+              a { color: white; }
+              </style>
+        <div class="navigation">
+            <a style="text-decoration:none" href="fixture.html" type="text/css" >Clasificación</a> <a style="text-decoration:none" href="Formulario.html" type="text/css" >Votación </a> <a style="text-decoration:none" href="registrarse.html" type="text/css" >Registrarse </a>  
+            <style>
+              a {  color:  rgb(54, 9, 92); }
+              </style>  
+        <hr>
+			<h2>Create tu cuenta:</h2>
+      
+      <form action="submission.html" method="GET">
+        <label for="username">Nombre de usuario:</label>
+        <br>
+				<input id="username" name="username" type="text" required minlength="3" maxlength="25">
+        <br>
+        <label for="pw">Contraseña:</label>
+        <br>
+       
+				<input id="pw" name="pw" type="password" required minlength="8" maxlength="15">
+        <br>
+        <label for="mail">Correo electrónico:</label>
+        <br>
+       
+				<input id="mail" name="mail" type="mail" >
+        <br>
+        <label for="pais">País:</label>
+        <br>
+				<input id="pais" name="pais" type="text" >
+        <br>
+        
+        <section class="equipo">
+            <label for="equipo">Equipo favorito</label>
+            <br>
+            <select name="equipo" id="equipo">
+              <option value="ars">Arsenal</option>
+              <option value="ast">Aston Villa</option>
+              <option value="bour">Bournemouth</option>
+              <option value="birght">Brighton</option>
+              <option value="burn">Burnley</option>
+              <option value="chel">Chelsea</option>
+              <option value="crystal">Crystal Palace</option>
+              <option value="everton">Everton</option>
+              <option value="leicester">Leicester City</option>
+              <option value="liver">Liverpool</option>
+              <option value="man.c">Manchester City</option>
+              <option value="man.u">Manchester United</option>
+              <option value="newcas">Newcastle</option>
+              <option value="nor">Norwich City</option>
+              <option value="shef">Sheffield United</option>
+              <option value="south">Southampton</option>
+              <option value="spurs">Tottenham</option>
+              <option value="wat">Watford</option>
+              <option value="west">West Ham</option>
+              <option value="wolves">Wolves</option>
+
+            </select>
+          </section>
+          
+          <input type="submit" value="Enviar">
+      </form>
+    </section>
+  </body>
+</html>
