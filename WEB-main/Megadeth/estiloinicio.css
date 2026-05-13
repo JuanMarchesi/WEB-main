@@ -1,85 +1,309 @@
 body{
     background-image: url("https://i.redd.it/megadeth-cover-art-wallpapers-v0-xzn7jmf4vpfg1.png?width=2560&format=png&auto=webp&s=69062b09ea5e80af5903c44147b6364f95aba7a9");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: lightgray;
-    color: #333;
+
+    text-align: center;
+}
+
+/* EFECTO CINEMATICO MEGADETH */
+
+body::before{
+
+    content:"";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+    radial-gradient(
+        circle at 30% 40%,
+        rgba(255,120,0,0.15),
+        transparent 30%
+    ),
+
+    radial-gradient(
+        circle at 70% 60%,
+        rgba(255,60,0,0.12),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at center,
+        rgba(255,255,255,0.04),
+        transparent 60%
+    );
+
+    mix-blend-mode: screen;
+
+    animation: megadethFire 10s infinite alternate;
+}
+
+/* ANIMACION */
+
+@keyframes megadethFire{
+
+    0%{
+        transform:
+        scale(1)
+        translate(0px,0px);
+
+        filter: blur(20px);
+    }
+
+    50%{
+        transform:
+        scale(1.05)
+        translate(-20px,10px);
+
+        filter: blur(30px);
+    }
+
+    100%{
+        transform:
+        scale(1.08)
+        translate(20px,-10px);
+
+        filter: blur(25px);
+    }
 }
 
 /* LOGO */
+
 .titulo{
-    background-color: white;
-    text-align: center;
     margin-top: 20px;
+    background: transparent;
 }
 
-/* BARRA DE MENÚ */
+.titulo img{
+    background: transparent;
+}
+
+/* MENU */
+
 #opciones{
-    background-color: rgb(0, 0, 0);
+
     width: 100%;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
-    padding: 15px 0;
+
     gap: 40px;
+
+    margin-top: 30px;
 }
 
-/* LINKS DEL MENÚ */
+/* TEXTO ESTILO METAL */
+
 #opciones a,
-#opciones .dropdown span{
-    color: rgb(255, 255, 255);
-    font-size: 22px;
+.dropdown span{
+
     text-decoration: none;
+
+    font-size: 35px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    color: #ffcc66;
+
+    font-family: serif;
+
+    letter-spacing: 2px;
+
     cursor: pointer;
+
+    text-shadow:
+        1px 1px 0 #5a2a00,
+        2px 2px 0 #5a2a00,
+        3px 3px 8px black;
+
+    transition: 0.3s;
 }
 
-/* QUITA ESTILO DE TABLA */
-table{
-    margin: 0;
+/* EFECTO HOVER */
+
+#opciones a:hover,
+.dropdown span:hover{
+
+    color: #ffe7a3;
+
+    text-shadow:
+        0 0 10px #ffcc66,
+        0 0 20px #ff9900,
+        0 0 30px black;
 }
 
 /* DROPDOWN */
-.dropdown {
+
+.dropdown{
     position: relative;
-    display: inline-block;
 }
 
-/* OCULTO */
-.dropdown-content {
+/* MENU OCULTO */
+
+.dropdown-content{
+
     display: none;
+
     position: absolute;
-    background-color: rgb(0, 0, 0);
-    min-width: 150px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+
+    top: 45px;
+
     left: 50%;
+
     transform: translateX(-50%);
+
+    background: rgba(0,0,0,0.85);
+
+    padding: 15px;
+
+    border: 1px solid goldenrod;
+
+    border-radius: 10px;
+
+    min-width: 180px;
 }
 
-/* LINKS DROPDOWN */
-.dropdown-content a {
+/* LINKS INTERNOS */
+
+.dropdown-content a{
+
     display: block;
-    text-align: center;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: black;
+
+    padding: 10px;
+
+    font-size: 22px;
+
+    color: goldenrod;
 }
 
-/* MOSTRAR AL PASAR MOUSE */
+/* MOSTRAR */
+
 .dropdown:hover .dropdown-content{
     display: block;
 }
 
-/* LOGO RESPONSIVE */
+/* RESPONSIVE */
+
 .logo{
+
     width: 100%;
+
     max-width: 700px;
+
     height: auto;
+
     display: block;
+
     margin: auto;
+}
+
+/* PLAYER */
+
+.player{
+
+    position: fixed;
+
+    bottom: 20px;
+
+    left: 20px;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 10px 15px;
+
+    background: rgba(0,0,0,0.75);
+
+    border: 1px solid rgba(255,180,0,0.25);
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.7);
+}
+
+/* PORTADA */
+
+.cover{
+
+    width: 60px;
+
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    border: 1px solid #333;
+}
+
+/* INFO */
+
+.info{
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.song{
+
+    color: white;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.album{
+
+    color: #999;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+/* AUDIO */
+
+.player audio{
+
+    width: 230px;
+
+    height: 28px;
+
+    opacity: 0.85;
+
+    filter:
+    grayscale(1)
+    contrast(1.2)
+    brightness(0.8);
+
+    border-radius: 10px;
 }
