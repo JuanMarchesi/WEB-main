@@ -12,70 +12,7 @@ body{
     text-align: center;
 }
 
-/* EFECTO CINEMATICO MEGADETH */
 
-body::before{
-
-    content:"";
-
-    position: fixed;
-
-    inset: 0;
-
-    pointer-events: none;
-
-    background:
-    radial-gradient(
-        circle at 30% 40%,
-        rgba(255,120,0,0.15),
-        transparent 30%
-    ),
-
-    radial-gradient(
-        circle at 70% 60%,
-        rgba(255,60,0,0.12),
-        transparent 35%
-    ),
-
-    radial-gradient(
-        circle at center,
-        rgba(255,255,255,0.04),
-        transparent 60%
-    );
-
-    mix-blend-mode: screen;
-
-    animation: megadethFire 10s infinite alternate;
-}
-
-/* ANIMACION */
-
-@keyframes megadethFire{
-
-    0%{
-        transform:
-        scale(1)
-        translate(0px,0px);
-
-        filter: blur(20px);
-    }
-
-    50%{
-        transform:
-        scale(1.05)
-        translate(-20px,10px);
-
-        filter: blur(30px);
-    }
-
-    100%{
-        transform:
-        scale(1.08)
-        translate(20px,-10px);
-
-        filter: blur(25px);
-    }
-}
 
 /* LOGO */
 
@@ -306,4 +243,192 @@ body::before{
     brightness(0.8);
 
     border-radius: 10px;
+}
+
+#ultimas-noticias{
+
+    margin-top: 90vh;
+
+    width: fit-content;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 50px;
+
+    background: #f5f1e8;
+
+    position: relative;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 0 40px rgba(0,0,0,0.7);
+
+    overflow: hidden;
+}
+
+/* EFECTO PAPEL */
+
+#ultimas-noticias::before{
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(0,0,0,0.04), transparent 25%),
+        radial-gradient(circle at 80% 30%, rgba(0,0,0,0.03), transparent 25%),
+        radial-gradient(circle at 50% 80%, rgba(0,0,0,0.03), transparent 30%);
+
+    pointer-events: none;
+}
+
+/* BORDES ROTOS */
+
+#ultimas-noticias::after{
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    border: 18px solid transparent;
+
+    border-image:
+    url("bordesrotos.png") 30 round;
+}
+
+/* TITULO */
+
+#ultimas-noticias h1{
+
+    color: black;
+
+    font-size: 65px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 40px;
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+}
+
+/* CONTENEDOR EN FILA */
+
+.noticias-grid{
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+/* IMAGENES */
+
+#ultimas-noticias img{
+
+    border: 3px solid rgba(0,0,0,0.75);
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+#ultimas-noticias img:hover{
+
+    transform: scale(1.03);
+
+    box-shadow:
+        0 0 20px rgba(0,0,0,0.5);
+}
+
+
+.footer{
+
+    background: black;
+
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+/* CONTENEDOR HORIZONTAL */
+
+.members{
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 90px;
+}
+
+/* CADA INTEGRANTE */
+
+.member{
+
+    display: inline-block;
+}
+
+.member img{
+
+    width: 140px;
+
+    height: auto;
+
+    display: block;
+
+    filter: grayscale(100%);
+
+    transition: 0.3s;
+}
+
+.member img:hover{
+
+    transform: scale(1.05);
+}
+
+/* LOGO ABAJO CENTRADO */
+
+.logo-fondo{
+
+    margin-top: 80px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.logo-fondo img{
+
+    width: 260px;
 }
