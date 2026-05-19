@@ -1,0 +1,425 @@
+body{
+    background-image: url("fondodiscos.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+}
+
+.titulo{
+
+    text-align: center;
+}
+
+#portadas{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 40px; /* separacion horizontal y vertical */
+
+    width: 95%;
+
+    margin: auto;
+}
+
+#portadas img{
+
+    transition: 0.3s;
+}
+
+#portadas img:hover{
+
+    transform: scale(1.08);
+}
+
+
+#portadas img{
+
+    transition: 0.35s;
+
+    border-radius: 6px;
+}
+
+/* Megadeth (2026) */
+
+#portadas a:nth-child(1) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #ffffff,
+    0 0 60px gold;
+}
+
+/* THE SICK, THE DYING... AND THE DEAD! */
+
+#portadas a:nth-child(2) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #ff7a00,
+    0 0 60px #ff3300;
+}
+
+/* DISTOPIA */
+
+#portadas a:nth-child(3) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #9db4c0,
+    0 0 60px #4d6d7a;
+}
+
+/* SUPER COLLIDER */
+
+#portadas a:nth-child(4) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #ff5cd1,
+    0 0 60px #7a4dff;
+}
+
+/* TH1RT3EN */
+
+#portadas a:nth-child(5) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #ff0000,
+    0 0 60px #661111;
+}
+
+/* ENDGAME */
+
+#portadas a:nth-child(6) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #d9d9d9,
+    0 0 60px #666666;
+}
+
+/* UNITED ABOMINATIONS */
+
+#portadas a:nth-child(7) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #ff5500,
+    0 0 60px #00aaff;
+}
+
+/* THE SYSTEM HAS FAILED */
+
+#portadas a:nth-child(8) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #ffcc33,
+    0 0 60px #5e3b1b;
+}
+
+/* The World Needs A Hero */
+
+#portadas a:nth-child(9) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #416b38,
+    0 0 60px #16187c;
+}
+
+/* Risk */
+
+#portadas a:nth-child(10) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #ff9a3c,
+    0 0 60px #b85c00;
+}
+
+/* Cryptic Writings */
+
+#portadas a:nth-child(11) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #ffffff,
+    0 0 60px #8b0000;
+}
+
+/* Youthanasia */
+
+#portadas a:nth-child(12) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #b7a6ff,
+    0 0 60px #5b3cff;
+}
+
+/* Countdown To Extinction */
+
+#portadas a:nth-child(13) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #7f8c8d,
+    0 0 60px #724ca5;
+}
+
+/* Rust In Peace */
+
+#portadas a:nth-child(14) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px goldenrod,
+    0 0 60px blue;
+}
+
+/* So Far, So Good... So What! */
+
+#portadas a:nth-child(15) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #ffd700,
+    0 0 60px #7a5c00;
+}
+
+/* Peace Sells... But Who's Buying? */
+
+#portadas a:nth-child(16) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #ff4d6d,
+    0 0 60px #ff8800;
+}
+
+/* Killing Is My Business... */
+
+#portadas a:nth-child(17) img:hover{
+
+    transform: scale(1.06);
+
+    box-shadow:
+    0 0 35px #d9d9d9,
+    0 0 60px #4a4a4a;
+}
+
+
+.disco{
+
+    position: relative;
+
+    display: inline-block;
+}
+
+/* MENU DESPLEGABLE */
+
+.info-disco{
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 20px;
+
+    transform: translateX(-50%);
+
+    width: 82%;
+
+    padding: 15px;
+
+    background: rgba(0,0,0,0.88);
+
+    color: white;
+
+    border-radius: 12px;
+
+    opacity: 0;
+
+    transition: 0.35s;
+
+    pointer-events: none;
+
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+    0 0 25px rgba(0,0,0,0.6);
+}
+
+/* TITULO DEL DISCO */
+
+.info-disco h2{
+
+    margin: 0 0 10px 0;
+
+    color: #ffcc00;
+
+    font-size: 20px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+/* TEXTO */
+
+.info-disco p{
+
+    margin: 5px 0;
+
+    font-size: 14px;
+
+    color: #dddddd;
+}
+
+/* APARECE AL PASAR EL CURSOR */
+
+.disco:hover .info-disco{
+
+    opacity: 1;
+
+    bottom: 35px;
+}
+
+/* EFECTO IMAGEN */
+
+.disco img{
+
+    transition: 0.35s;
+
+    border-radius: 6px;
+}
+
+.disco:hover img{
+
+    transform: scale(1.05);
+}
+
+.player{
+
+    position: fixed;
+
+    bottom: 20px;
+
+    left: 20px;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 10px 15px;
+
+    background: rgba(0,0,0,0.75);
+
+    border: 1px solid rgba(255, 0, 0, 0.25);
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.7);
+}
+
+/* PORTADA */
+
+.cover{
+
+    width: 60px;
+
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    border: 1px solid #333;
+}
+
+/* INFO */
+
+.info{
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.song{
+
+    color: white;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.album{
+
+    color: #999;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+/* AUDIO */
+
+.player audio{
+
+    width: 230px;
+
+    height: 28px;
+
+    opacity: 0.85;
+
+    filter:
+    grayscale(1)
+    contrast(1.2)
+    brightness(0.8);
+
+    border-radius: 10px;
+}
