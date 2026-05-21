@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #050505;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* FONDO */
+
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+    linear-gradient(rgba(0,0,0,.88), rgba(0,0,0,.96)),
+    url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=2070&auto=format&fit=crop");
+
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+/* TITULO */
+
+#titulo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+#titulo img{
+    width: 700px;
+    max-width: 90%;
+    height: auto;
+
+    filter:
+    drop-shadow(0 0 10px rgba(255,255,255,.15))
+    drop-shadow(0 0 25px rgba(255,140,0,.25));
+
+    transition: .4s;
+}
+
+#titulo img:hover{
+    transform: scale(1.03);
+}
+
+/* TIMELINE */
+
+.timeline{
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding-bottom: 120px;
+}
+
+/* LINEA CENTRAL */
+
+.timeline::before{
+    content: "";
+    position: absolute;
+
+    width: 4px;
+    height: 100%;
+
+    left: 50%;
+    top: 0;
+
+    transform: translateX(-50%);
+
+    background:
+    linear-gradient(
+        to bottom,
+        transparent,
+        #8d8d8d,
+        #ffffff,
+        #8d8d8d,
+        transparent
+    );
+
+    box-shadow:
+    0 0 10px rgba(255,255,255,.3),
+    0 0 25px rgba(255,255,255,.15);
+}
+
+/* ITEMS */
+
+.container{
+    position: relative;
+    width: 50%;
+    padding: 40px 70px;
+}
+
+/* IZQUIERDA */
+
+.container:nth-child(odd){
+    left: 0;
+}
+
+/* DERECHA */
+
+.container:nth-child(even){
+    left: 50%;
+}
+
+/* PUNTOS */
+
+.container::before{
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    background: white;
+    border-radius: 50%;
+
+    top: 60px;
+    z-index: 10;
+
+    box-shadow:
+    0 0 10px white,
+    0 0 25px rgba(255,255,255,.8);
+}
+
+/* POSICION PUNTOS */
+
+.container:nth-child(odd)::before{
+    right: -10px;
+}
+
+.container:nth-child(even)::before{
+    left: -10px;
+}
+
+/* TARJETAS */
+
+.content{
+    position: relative;
+
+    background: rgba(15,15,15,.88);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    backdrop-filter: blur(6px);
+
+    overflow: hidden;
+
+    transition: .35s ease;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,.45),
+    0 0 30px rgba(255,255,255,.03);
+}
+
+/* BRILLO SUPERIOR */
+
+.content::before{
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.9),
+        transparent
+    );
+}
+
+/* HOVER */
+
+.content:hover{
+    transform: translateY(-8px);
+
+    border-color: rgba(255,255,255,.25);
+
+    box-shadow:
+    0 0 15px rgba(255,255,255,.08),
+    0 0 35px rgba(255,140,0,.08);
+}
+
+/* IMAGENES */
+
+.content img{
+    width: 100%;
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+
+    object-fit: cover;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    transition: .4s;
+}
+
+.content img:hover{
+    transform: scale(1.02);
+}
+
+/* AÑO */
+
+.year{
+    display: inline-block;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    margin-bottom: 18px;
+
+    color: #ffffff;
+
+    text-shadow:
+    0 0 10px rgba(255,255,255,.4),
+    0 0 20px rgba(255,140,0,.25);
+}
+
+/* TITULOS */
+
+.content h2{
+    font-size: 34px;
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* TEXTO */
+
+.content p{
+    color: #d2d2d2;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 900px){
+
+    .timeline::before{
+        left: 25px;
+    }
+
+    .container{
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+
+        left: 0 !important;
+
+        margin-bottom: 50px;
+    }
+
+    .container::before{
+        left: 15px !important;
+    }
+
+    .year{
+        font-size: 30px;
+    }
+
+    .content h2{
+        font-size: 24px;
+    }
+
+    .content p{
+        font-size: 15px;
+    }
+}
