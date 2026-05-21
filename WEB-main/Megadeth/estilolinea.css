@@ -1,0 +1,530 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #050505;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* FONDO */
+
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+    linear-gradient(rgba(0,0,0,.88), rgba(0,0,0,.96)),
+    url("https://images2.alphacoders.com/709/thumb-1920-709285.jpg");
+
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+/* TITULO */
+
+#titulo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+#titulo img{
+    width: 700px;
+    max-width: 90%;
+    height: auto;
+
+    filter:
+    drop-shadow(0 0 10px rgba(255,255,255,.15))
+    drop-shadow(0 0 25px rgba(255,140,0,.25));
+
+    transition: .4s;
+}
+
+#titulo img:hover{
+    transform: scale(1.03);
+}
+
+/* TIMELINE */
+
+.timeline{
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding-bottom: 120px;
+}
+
+/* LINEA CENTRAL */
+
+.timeline::before{
+    content: "";
+    position: absolute;
+
+    width: 4px;
+    height: 100%;
+
+    left: 50%;
+    top: 0;
+
+    transform: translateX(-50%);
+
+    background:
+    linear-gradient(
+        to bottom,
+        transparent,
+        #8d8d8d,
+        #ffffff,
+        #8d8d8d,
+        transparent
+    );
+
+    box-shadow:
+    0 0 10px rgba(255,255,255,.3),
+    0 0 25px rgba(255,255,255,.15);
+}
+
+/* ITEMS */
+
+.container{
+    position: relative;
+    width: 50%;
+
+    padding: 40px 60px;
+
+    box-sizing: border-box;
+}
+
+/* IZQUIERDA */
+
+.container:nth-child(odd){
+    left: 0;
+}
+
+/* DERECHA */
+
+.container:nth-child(even){
+    left: 50%;
+}
+
+/* PUNTOS */
+
+.container::before{
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    background: white;
+    border-radius: 50%;
+
+    top: 60px;
+    z-index: 10;
+
+    box-shadow:
+    0 0 10px white,
+    0 0 25px rgba(255,255,255,.8);
+}
+
+/* POSICION PUNTOS */
+
+.container:nth-child(odd)::before{
+    right: -12px;
+}
+
+.container:nth-child(even)::before{
+    left: -12px;
+}
+
+/* TARJETAS */
+
+.content{
+    position: relative;
+
+    background: rgba(15,15,15,.88);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    backdrop-filter: blur(6px);
+
+    overflow: hidden;
+
+    transition: .35s ease;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,.45),
+    0 0 30px rgba(255,255,255,.03);
+}
+
+/* BRILLO SUPERIOR */
+
+.content::before{
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.9),
+        transparent
+    );
+}
+
+/* HOVER */
+
+.content:hover{
+    transform: translateY(-8px);
+
+    border-color: rgba(255,255,255,.25);
+
+    box-shadow:
+    0 0 15px rgba(255,255,255,.08),
+    0 0 35px rgba(255,140,0,.08);
+}
+
+/* IMAGENES */
+
+.content img{
+    width: 100%;
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+
+    object-fit: cover;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    transition: .4s;
+}
+
+.content img:hover{
+    transform: scale(1.02);
+}
+
+
+.year{
+    display: inline-block;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    margin-bottom: 18px;
+
+    color: #ffffff;
+
+    text-shadow:
+    0 0 10px rgba(255,255,255,.4),
+    0 0 20px rgba(255,140,0,.25);
+}
+
+
+
+.content h2{
+    font-size: 34px;
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+.content p{
+    color: #d2d2d2;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+
+
+
+#opciones{
+
+    padding-bottom: 400px;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 40px;
+
+    margin-top: 30px;
+}
+
+
+
+#opciones a,
+.dropdown span{
+
+    text-decoration: none;
+
+    font-size: 35px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    color: #ffcc66;
+
+    font-family: serif;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    text-shadow:
+        1px 1px 0 #5a2a00,
+        2px 2px 0 #5a2a00,
+        3px 3px 8px black;
+
+    transition: 0.3s;
+}
+
+
+#opciones a:hover,
+.dropdown span:hover{
+
+    color: #ffe7a3;
+
+    text-shadow:
+        0 0 10px #ffcc66,
+        0 0 20px #ff9900,
+        0 0 30px black;
+}
+
+
+.dropdown{
+    position: relative;
+}
+
+
+.dropdown-content{
+
+    display: none;
+
+    position: absolute;
+
+    top: 45px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(0,0,0,0.85);
+
+    padding: 15px;
+
+    border: 1px solid goldenrod;
+
+    border-radius: 10px;
+
+    min-width: 180px;
+
+    z-index: 9999;
+}
+
+
+.dropdown-content a{
+
+    display: block;
+
+    padding: 10px;
+
+    font-size: 22px;
+
+    color: goldenrod;
+}
+
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.player{
+
+    position: fixed;
+
+    bottom: 20px;
+
+    left: 20px;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 10px 15px;
+
+    background: rgba(0,0,0,0.75);
+
+    border: 1px solid rgba(255,180,0,0.25);
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.7);
+}
+
+/* PORTADA */
+
+.cover{
+
+    width: 60px;
+
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    border: 1px solid #333;
+}
+
+/* INFO */
+
+.info{
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.song{
+
+    color: white;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.album{
+
+    color: #999;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+/* AUDIO */
+
+.player audio{
+
+    width: 230px;
+
+    height: 28px;
+
+    opacity: 0.85;
+
+    filter:
+    grayscale(1)
+    contrast(1.2)
+    brightness(0.8);
+
+    border-radius: 10px;
+}
+
+.footer{
+
+    background: black;
+
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+/* CONTENEDOR HORIZONTAL */
+
+.members{
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 90px;
+}
+
+/* CADA INTEGRANTE */
+
+.member{
+
+    display: inline-block;
+}
+
+.member img{
+
+    width: 140px;
+
+    height: auto;
+
+    display: block;
+
+    filter: grayscale(100%);
+
+    transition: 0.3s;
+}
+
+.member img:hover{
+
+    transform: scale(1.05);
+}
+
+/* LOGO ABAJO CENTRADO */
+
+.logo-fondo{
+
+    margin-top: 80px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.logo-fondo img{
+
+    width: 260px;
+}

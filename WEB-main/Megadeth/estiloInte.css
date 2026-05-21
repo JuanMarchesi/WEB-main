@@ -1,0 +1,513 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    background:
+    linear-gradient(rgba(0,0,0,.88), rgba(0,0,0,.92)),
+    url("https://uk.rarevinyl.com/cdn/shop/files/megadeth-rust-in-peace-ex-uk-vinyl-lp-album-record-est2132-654741_1200x600_crop_center.jpg?v=1736253183");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+}
+
+.container{
+    width: 90%;
+    max-width: 1500px;
+
+    margin: auto;
+    padding: 50px 0;
+
+    display: flex;
+    gap: 60px;
+
+    align-items: flex-start;
+}
+
+.container img{
+    width: 450px;
+    height: 700px;
+
+    object-fit: cover;
+
+    border: 4px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 0 25px rgba(0,0,0,.7);
+
+    transition: .4s;
+}
+
+.container img:hover{
+    transform: scale(1.02);
+}
+
+.right{
+    flex: 1;
+}
+
+h1{
+    font-size: 4rem;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+    font-family: Georgia, serif;
+
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 3rem;
+
+    margin-top: 60px;
+    margin-bottom: 20px;
+
+    letter-spacing: 4px;
+
+    font-family: Georgia, serif;
+}
+
+.line{
+    width: 120px;
+    height: 5px;
+
+    background: #b68b2d;
+
+    margin-bottom: 40px;
+}
+
+.info p,
+.Inicio p{
+    font-size: 1.5rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+
+    color: rgba(255,255,255,.88);
+}
+
+strong{
+    color: white;
+}
+
+@media(max-width: 1000px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    .container img{
+        width: 100%;
+        height: auto;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    .info p,
+    .Inicio p{
+        font-size: 1.1rem;
+    }
+/* LOGO */
+
+.titulo{
+    margin-top: 20px;
+    background: transparent;
+}
+
+.titulo img{
+    background: transparent;
+}
+
+/* MENU */
+
+#opciones{
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 40px;
+
+    margin-top: 30px;
+}
+
+/* TEXTO ESTILO METAL */
+
+#opciones a,
+.dropdown span{
+
+    text-decoration: none;
+
+    font-size: 35px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    color: #ffcc66;
+
+    font-family: serif;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    text-shadow:
+        1px 1px 0 #5a2a00,
+        2px 2px 0 #5a2a00,
+        3px 3px 8px black;
+
+    transition: 0.3s;
+}
+
+/* EFECTO HOVER */
+
+#opciones a:hover,
+.dropdown span:hover{
+
+    color: #ffe7a3;
+
+    text-shadow:
+        0 0 10px #ffcc66,
+        0 0 20px #ff9900,
+        0 0 30px black;
+}
+
+/* DROPDOWN */
+
+.dropdown{
+    position: relative;
+}
+
+/* MENU OCULTO */
+
+.dropdown-content{
+
+    display: none;
+
+    position: absolute;
+
+    top: 45px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(0,0,0,0.85);
+
+    padding: 15px;
+
+    border: 1px solid goldenrod;
+
+    border-radius: 10px;
+
+    min-width: 180px;
+}
+
+/* LINKS INTERNOS */
+
+.dropdown-content a{
+
+    display: block;
+
+    padding: 10px;
+
+    font-size: 22px;
+
+    color: goldenrod;
+}
+
+/* MOSTRAR */
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+}
+
+#opciones{
+
+    padding-bottom: 400px;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 40px;
+
+    margin-top: 30px;
+}
+
+
+
+#opciones a,
+.dropdown span{
+
+    text-decoration: none;
+
+    font-size: 35px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    color: #ffcc66;
+
+    font-family: serif;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    text-shadow:
+        1px 1px 0 #5a2a00,
+        2px 2px 0 #5a2a00,
+        3px 3px 8px black;
+
+    transition: 0.3s;
+}
+
+
+#opciones a:hover,
+.dropdown span:hover{
+
+    color: #ffe7a3;
+
+    text-shadow:
+        0 0 10px #ffcc66,
+        0 0 20px #ff9900,
+        0 0 30px black;
+}
+
+
+.dropdown{
+    position: relative;
+}
+
+
+.dropdown-content{
+
+    display: none;
+
+    position: absolute;
+
+    top: 45px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(0,0,0,0.85);
+
+    padding: 15px;
+
+    border: 1px solid goldenrod;
+
+    border-radius: 10px;
+
+    min-width: 180px;
+
+    z-index: 9999;
+}
+
+
+.dropdown-content a{
+
+    display: block;
+
+    padding: 10px;
+
+    font-size: 22px;
+
+    color: goldenrod;
+}
+
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.player{
+
+    position: fixed;
+
+    bottom: 20px;
+
+    left: 20px;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 10px 15px;
+
+    background: rgba(0,0,0,0.75);
+
+    border: 1px solid rgba(255,180,0,0.25);
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,0.7);
+}
+
+/* PORTADA */
+
+.cover{
+
+    width: 60px;
+
+    height: 60px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    border: 1px solid #333;
+}
+
+/* INFO */
+
+.info{
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.song{
+
+    color: white;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.album{
+
+    color: #999;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+/* AUDIO */
+
+.player audio{
+
+    width: 230px;
+
+    height: 28px;
+
+    opacity: 0.85;
+
+    filter:
+    grayscale(1)
+    contrast(1.2)
+    brightness(0.8);
+
+    border-radius: 10px;
+}
+
+.footer{
+
+    background: black;
+
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+/* CONTENEDOR HORIZONTAL */
+
+.members{
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 90px;
+}
+
+/* CADA INTEGRANTE */
+
+.member{
+
+    display: inline-block;
+}
+
+.member img{
+
+    width: 140px;
+
+    height: auto;
+
+    display: block;
+
+    filter: grayscale(100%);
+
+    transition: 0.3s;
+}
+
+.member img:hover{
+
+    transform: scale(1.05);
+}
+
+/* LOGO ABAJO CENTRADO */
+
+.logo-fondo{
+
+    margin-top: 80px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.logo-fondo img{
+
+    width: 260px;
+}
